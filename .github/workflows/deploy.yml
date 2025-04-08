@@ -32,12 +32,6 @@ jobs:
       - name: Build site
         run: npm run build # This runs 'npm run css:build && eleventy'
 
-      - name: Debug secrets
-        run: |
-          echo "HOST: ${{ secrets.EC2_HOST }}"
-          echo "USER: ${{ secrets.EC2_USER }}"
-          echo "TARGET DIR: ${{ secrets.TARGET_DIR }}"
-
       # 5. Deploy to EC2 using rsync over SSH
       - name: Deploy to EC2
         uses: easingthemes/ssh-deploy@v5.0.0 # Use a dedicated action for deployment
