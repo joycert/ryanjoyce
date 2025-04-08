@@ -1,0 +1,45 @@
+name: Deploy Eleventy Site to EC2
+
+on:
+  # Triggers the workflow on push events but only for the main branch
+  push:
+    branches: [main] # Adjust if your main branch is named differently (e.g., master)
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18" # Specify your desired Node.js version (LTS recommended)
+          cache: "npm" # Cache npm dependencies for faster builds
+
+      # 3. Install dependencies using package-lock.json
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Build the Eleventy site
+      - name: Build site
+        run: npm run build # This runs 'npm run css:build && eleventy'
+
+      # 5. Deploy to EC2 using rsync over SSH
+      - name: Deploy to EC2
+        uses: easingthemes/ssh-deploy@v5.0.0 # Use a dedicated action for deployment
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          SOURCE: "_site" # Copy the whole _site directory
+          TARGET: ${{ secrets.TARGET_DIR }} # Target is /var/www/ryanjoyce/
+          ARGS: "-avz --delete" # Use rsync arguments: archive, verbose, compress, delete extraneous files
+          EXCLUDE: "/.git/, /node_modules/" # Exclude unnecessary files/folders
