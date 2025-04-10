@@ -1,8 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,njk}"],
+  content: ["src/**/*.html", "src/**/*.njk", "src/**/*.js", "src/**/*.md"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ["Merriweather", "serif"],
+        sans: ["Merriweather", "serif"],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            fontFamily: "Merriweather, serif !important",
+          },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

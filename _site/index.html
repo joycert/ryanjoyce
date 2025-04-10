@@ -5,12 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ryan Joyce</title>
     <link href="/assets/css/main.css" rel="stylesheet">
+    <style>
+        /* Remove table borders */
+        .prose table, .prose td, .prose th, .prose tr, .prose tbody, .prose thead {
+            border: none !important;
+            border-width: 0 !important;
+            border-color: transparent !important;
+            border-collapse: collapse !important;
+        }
+        .prose table {
+            box-shadow: none !important;
+        }
+    </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="text-center">
+<body class="min-h-screen bg-gray-50 flex flex-col">
+    <header class="w-full text-center mb-8 pt-8">
+            <a href="/" class="text-4xl font-bold text-gray-800 no-underline hover:underline">
+                Ryan Joyce
+            </a>
+    </header>
+    
+    <!-- This container takes up all available space and centers the image vertically -->
+    <div class="flex-grow flex items-center justify-center">
         
-<h1 class="text-5xl font-bold text-gray-800 mb-4">Ryan Joyce</h1>
-<p class="text-xl text-gray-600">Hi</p> 
+            <img src="/assets/images/me.webp" alt="Ryan Joyce" class="rounded-lg w-64 border-2 border-white shadow-md">
+        
     </div>
+    
+    <!-- This container is fixed at the bottom with the links -->
+    <main class="pb-20">
+        <div class="text-center prose prose-lg min-w-60% max-w-4xl mx-auto">
+            <table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="/whoiam">Who I am</a></td>
+<td style="text-align:center"><a href="/whatido">What I do</a></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/whatithinkabout">What I think about</a></td>
+<td style="text-align:center"><a href="/howtoreachme">How to reach me</a></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+    </main>
 </body>
 </html> 
