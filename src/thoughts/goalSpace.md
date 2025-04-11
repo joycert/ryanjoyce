@@ -1,4 +1,5 @@
 ---
+layout: post
 title: The Goal Space
 description: Succeed! Fail! A lot!
 image: goalSpace.webp
