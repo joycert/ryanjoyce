@@ -9,7 +9,7 @@
     "dev:css": "tailwindcss -i src/assets/css/main.css -o _site/assets/css/main.css --watch",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i src/assets/css/main.css -o _site/assets/css/main.css",
-    "rebuild-css": "tailwindcss -i src/assets/css/main.css -o _site/assets/css/main.css --postcss"
+    "rebuild-css": "tailwindcss -i src/assets/css/main.css -o _site/assets/css/main.css"
   },
   "keywords": [],
   "author": "",
