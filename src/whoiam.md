@@ -3,9 +3,9 @@ layout: about
 title: Who I Am
 ---
 
-## N/A
+## Definitions are subjective
 
-No matter what I say, you shouldn't believe me. I have an incredibly biased perspecive. But the collection of facts and personal perspectives on this website should allow you to form an opinion.
+If I tried to define myself, even if I did a very good job, it wouldn't really translate. I think the point of this website is to give you enough data to get a decent idea of who I am.
 
 ## Timeline
 
