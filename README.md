@@ -13,6 +13,8 @@ git clone https://github.com/yourusername/ryanjoyce.git
 cd ryanjoyce
 ```
 
+1.5. Delete all my markdown files- unless you want to pretend you're me. Trust me though it's not that great. Go ahead and pretend to be someone else like Chris Hemsworth or your recently deceased elderly neighbor who you found and hid in the forest so you can keep collecting those social security checks and voting for your canidate of choice (twice!).
+
 2. Install dependencies:
 
 ```bash
