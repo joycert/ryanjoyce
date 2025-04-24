@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tennis
+title: On tennis
 description: Learning new things is important to me
 image: tennis.webp
 date: 2025-04-11

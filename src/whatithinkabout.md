@@ -1,5 +1,5 @@
 ---
 layout: grid
-title: What I Think About
-collection_name: thoughts
+title: Life
+collection_name: posts
 ---

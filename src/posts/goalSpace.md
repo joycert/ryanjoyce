@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Goal Space
+title: On goal space
 description: Succeed! Fail! A lot!
 image: goalSpace.webp
 date: 2025-04-10

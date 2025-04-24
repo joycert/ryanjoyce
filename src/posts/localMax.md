@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Problem of Local Maxima
+title: On the problem of local maxima
 description: Why suffering is not just important, but inevitable
 image: localMaxima.webp
 date: 2025-04-10

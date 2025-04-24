@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interpersonal Communication
+title: On interpersonal communication
 description: Why is it so hard for me?
 image: communication.webp
 date: 2025-04-20
@@ -25,6 +25,8 @@ Knowledge of good food (shared prior context?)
 Knowledge of berry bush locations (environment, also part of context)
 
 This reduction/expansion handicap has stayed with us through the years. Despite the efforts we've made to overcome it through expanding our vocabulary and grammar past grunting (with varying levels of success) it is still impossible to convey an idea fully from one person to another. I still have to apply a filter to my idea to distill it into words, then you have to reinterpret those words into an idea. Hopefully they are the same. My goal as a writer is to make them at least similar.
+
+PS
 
 Apologies for the fact that every character in this metaphor was a man, it's just that in my experience men are much better communicators anyway. A cavewoman could mean just about anything with a food grunt- i.e.
 
