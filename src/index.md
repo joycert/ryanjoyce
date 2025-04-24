@@ -4,9 +4,9 @@ title: Ryan Joyce
 profileImage: me.webp
 ---
 
-|                     |                                  |
-| :-----------------: | :------------------------------: |
-| [Who I am](/whoiam) |     [Tech stuff](/techposts)     |
-|                     |                                  |
-|                     |                                  |
-| [Life](/itsmylife)  | [How to reach me](/howtoreachme) |
+|                                         |                                  |
+| :-------------------------------------: | :------------------------------: |
+|           [Who I am](/whoiam)           |     [Tech stuff](/techposts)     |
+|                                         |                                  |
+|                                         |                                  |
+| [What I do and think about](/itsmylife) | [How to reach me](/howtoreachme) |
