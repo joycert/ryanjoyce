@@ -4,7 +4,7 @@ title: On goal space
 description: Succeed! Fail! A lot!
 image: goalSpace.webp
 date: 2025-04-10
-tags: thoughts
+tags: posts
 ---
 
 If there are traits in a person that define how able they are to achieve goals of varying levels of complexity, it would make sense to encourage them to shoot to be closest to- without exceeding- that ability.

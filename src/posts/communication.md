@@ -4,7 +4,7 @@ title: On interpersonal communication
 description: Why is it so hard for me?
 image: communication.webp
 date: 2025-04-20
-tags: thoughts
+tags: posts
 ---
 
 I've spent a lot of time making two pieces of silicon "communicate." In this sense communication most simply put is the transfer of data. The issue with people is the circuits that run their brain are sufficiently complicated that we can't transfer data between them with ones and zeros.

@@ -4,7 +4,7 @@ title: On the problem of local maxima
 description: Why suffering is not just important, but inevitable
 image: localMaxima.webp
 date: 2025-04-10
-tags: thoughts
+tags: posts
 ---
 
 Finding a maximum is a natural tendency. We eat until we have had enough, then no more. We exercise until we are properly tired, then stop. It is always possible to have too much of something, so there is a finite optimal amount to anything.
