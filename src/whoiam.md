@@ -3,9 +3,10 @@ layout: about
 title: Who I Am
 ---
 
-## Definitions are subjective
+## I have no idea who I am- here are some quotes
 
-If I tried to define myself, even if I did a very good job, it wouldn't really translate. I think the point of this website is to give you enough data to get a decent idea of who I am.
+"A real cool guy" - My friend Luke
+"Narcisist" - My mom
 
 ## Timeline
 
