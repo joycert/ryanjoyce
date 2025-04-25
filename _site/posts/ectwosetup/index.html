@@ -17,7 +17,7 @@
         <div class="container mx-auto px-6 max-w-4xl">
             
             <div class="w-full overflow-hidden rounded-lg mb-8">
-                <picture><source type="image/webp" srcset="/assets/images/qB3J0l4SCd-300.webp 300w, /assets/images/qB3J0l4SCd-600.webp 600w, /assets/images/qB3J0l4SCd-900.webp 900w" sizes="(min-width: 1200px) 1200px, 100vw"><img src="/assets/images/qB3J0l4SCd-300.jpeg" alt="My EC2 Setup" loading="lazy" decoding="async" width="900" height="900" srcset="/assets/images/qB3J0l4SCd-300.jpeg 300w, /assets/images/qB3J0l4SCd-600.jpeg 600w, /assets/images/qB3J0l4SCd-900.jpeg 900w" sizes="(min-width: 1200px) 1200px, 100vw"></picture>
+                <img src="/assets/images/ectwosetup.png" alt="My EC2 Setup" class="w-full h-auto">
             </div>
             
             
@@ -38,7 +38,7 @@
 </ul>
 <h2 id="2.-configure-instance-settings" tabindex="-1">2. Configure Instance Settings</h2>
 <h3 id="basic-configuration" tabindex="-1">Basic Configuration</h3>
-<p><img src="./basic_config.png" alt="Basic Configuration Settings"></p>
+<p><img src="/assets/images/ectwosetup/basic_config.png" alt="Basic Configuration Settings"></p>
 <ul>
 <li><strong>Name</strong>: Choose a good one, but it does not matter what it is</li>
 <li><strong>Application and OS Images</strong>: Ubuntu (best supported, most open source operating system)</li>
@@ -46,9 +46,9 @@
 <li><strong>Architecture</strong>: 64-bit (x86)</li>
 <li><strong>Instance Type</strong>: Whichever is free tier eligible is fine for anyone to start with, I personally use a t3.small</li>
 </ul>
-<p><img src="./instance_type.png" alt="Instance Type Selection"></p>
+<p><img src="/assets/images/ectwosetup/instance_type.png" alt="Instance Type Selection"></p>
 <h2 id="3.-key-pair-setup" tabindex="-1">3. Key Pair Setup</h2>
-<p><img src="./key_pair.png" alt="Key Pair Configuration"></p>
+<p><img src="/assets/images/ectwosetup/key_pair.png" alt="Key Pair Configuration"></p>
 <ul>
 <li><strong>Name</strong>: Good trick is to use something associated with your server name (e.g. illinois, chicago)</li>
 <li><strong>Type</strong>: ED25519 (faster, stronger encryption than RSA)</li>
@@ -58,7 +58,7 @@
 <p><strong>Note</strong>: The .pem file will download automatically. Store it somewhere safe! If you are not well versed in navigating file systems, the safest spot is probably an &quot;important&quot; folder on your desktop.</p>
 </blockquote>
 <h2 id="4.-security-group-configuration" tabindex="-1">4. Security Group Configuration</h2>
-<p><img src="./security_group.png" alt="Security Group Settings"></p>
+<p><img src="/assets/images/ectwosetup/security_group.png" alt="Security Group Settings"></p>
 <p>The default security group only opens SSH ports. Here are some that I open because I use them:</p>
 <ul>
 <li>
