@@ -2,7 +2,7 @@
 layout: post
 title: My EC2 Setup
 description: Run your own server if ur not a cuck bitch
-image: backflip.webp
+image: ectwosetup.png
 date: 2025-04-23
 tags: tech_posts
 ---
