@@ -4,7 +4,7 @@ title: My EC2 Setup
 description: Run your own server if ur not a cuck bitch
 image: ectwosetup.png
 date: 2025-04-23
-tags: tech_posts
+tags: techposts
 ---
 
 ## This is how I like to setup my AWS EC2 instance
