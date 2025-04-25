@@ -19,7 +19,7 @@ This is where I deploy my website and some useful backend stuff. It is by no mea
 
 ### Basic Configuration
 
-![Basic Configuration Settings](./basic_config.png)
+![Basic Configuration Settings]({{ "./basic_config.png" | processImage }})
 
 - **Name**: Choose a good one, but it does not matter what it is
 - **Application and OS Images**: Ubuntu (best supported, most open source operating system)
@@ -27,11 +27,11 @@ This is where I deploy my website and some useful backend stuff. It is by no mea
 - **Architecture**: 64-bit (x86)
 - **Instance Type**: Whichever is free tier eligible is fine for anyone to start with, I personally use a t3.small
 
-![Instance Type Selection](./instance_type.png)
+![Instance Type Selection]({{ "./instance_type.png" | processImage }})
 
 ## 3. Key Pair Setup
 
-![Key Pair Configuration](./key_pair.png)
+![Key Pair Configuration]({{ "./key_pair.png" | processImage }})
 
 - **Name**: Good trick is to use something associated with your server name (e.g. illinois, chicago)
 - **Type**: ED25519 (faster, stronger encryption than RSA)
@@ -41,7 +41,7 @@ This is where I deploy my website and some useful backend stuff. It is by no mea
 
 ## 4. Security Group Configuration
 
-![Security Group Settings](./security_group.png)
+![Security Group Settings]({{ "./security_group.png" | processImage }})
 
 The default security group only opens SSH ports. Here are some that I open because I use them:
 
