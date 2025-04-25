@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My EC2 Setup</title>
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+    <header class="w-full text-center mb-8 pt-8">
+        <a href="/" class="text-4xl font-bold text-gray-800 no-underline hover:underline">
+            Ryan Joyce
+        </a>
+    </header>
+    
+    <main class="flex-grow">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <div class="w-full overflow-hidden rounded-lg mb-8">
+                <picture><source type="image/webp" srcset="/assets/images/qB3J0l4SCd-300.webp 300w, /assets/images/qB3J0l4SCd-600.webp 600w, /assets/images/qB3J0l4SCd-900.webp 900w" sizes="(min-width: 1200px) 1200px, 100vw"><img src="/assets/images/qB3J0l4SCd-300.jpeg" alt="My EC2 Setup" loading="lazy" decoding="async" width="900" height="900" srcset="/assets/images/qB3J0l4SCd-300.jpeg 300w, /assets/images/qB3J0l4SCd-600.jpeg 600w, /assets/images/qB3J0l4SCd-900.jpeg 900w" sizes="(min-width: 1200px) 1200px, 100vw"></picture>
+            </div>
+            
+            
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">My EC2 Setup</h1>
+            
+            
+            <p class="text-xl text-gray-600 mb-8">Run your own server if ur not a cuck bitch</p>
+            
+            
+            <div class="prose prose-lg max-w-none mb-16">
+                <h2 id="this-is-how-i-like-to-setup-my-aws-ec2-instance" tabindex="-1">This is how I like to setup my AWS EC2 instance</h2>
+<p>This is where I deploy my website and some useful backend stuff. It is by no means optimized for security or performance, but its a great middle ground.</p>
+<ol>
+<li>Access the AWS EC2 Console</li>
+</ol>
+<ul>
+<li>Navigate to: <a href="https://us-east-2.console.aws.amazon.com/ec2/home">EC2 Console</a></li>
+</ul>
+<h2 id="2.-configure-instance-settings" tabindex="-1">2. Configure Instance Settings</h2>
+<h3 id="basic-configuration" tabindex="-1">Basic Configuration</h3>
+<p><img src="./basic_config.png" alt="Basic Configuration Settings"></p>
+<ul>
+<li><strong>Name</strong>: Choose a good one, but it does not matter what it is</li>
+<li><strong>Application and OS Images</strong>: Ubuntu (best supported, most open source operating system)</li>
+<li><strong>Amazon Machine Image</strong>: Whichever is free</li>
+<li><strong>Architecture</strong>: 64-bit (x86)</li>
+<li><strong>Instance Type</strong>: Whichever is free tier eligible is fine for anyone to start with, I personally use a t3.small</li>
+</ul>
+<p><img src="./instance_type.png" alt="Instance Type Selection"></p>
+<h2 id="3.-key-pair-setup" tabindex="-1">3. Key Pair Setup</h2>
+<p><img src="./key_pair.png" alt="Key Pair Configuration"></p>
+<ul>
+<li><strong>Name</strong>: Good trick is to use something associated with your server name (e.g. illinois, chicago)</li>
+<li><strong>Type</strong>: ED25519 (faster, stronger encryption than RSA)</li>
+<li><strong>Format</strong>: .pem</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: The .pem file will download automatically. Store it somewhere safe! If you are not well versed in navigating file systems, the safest spot is probably an &quot;important&quot; folder on your desktop.</p>
+</blockquote>
+<h2 id="4.-security-group-configuration" tabindex="-1">4. Security Group Configuration</h2>
+<p><img src="./security_group.png" alt="Security Group Settings"></p>
+<p>The default security group only opens SSH ports. Here are some that I open because I use them:</p>
+<ul>
+<li>
+<p><strong>HTTP (Unencrypted)</strong></p>
+<ul>
+<li>Type: HTTP</li>
+<li>Port Range: 80</li>
+<li>Source: Anywhere</li>
+</ul>
+</li>
+<li>
+<p><strong>HTTPS (Encrypted)</strong></p>
+<ul>
+<li>Type: HTTPS</li>
+<li>Port Range: 443</li>
+<li>Source: Anywhere</li>
+</ul>
+</li>
+<li>
+<p><strong>Unencrypted MQTT</strong></p>
+<ul>
+<li>Type: Custom TCP</li>
+<li>Port Range: 1883</li>
+<li>Source: Anywhere</li>
+</ul>
+</li>
+<li>
+<p><strong>Encrypted MQTT</strong></p>
+<ul>
+<li>Type: Custom TCP</li>
+<li>Port Range: 8883</li>
+<li>Source: Anywhere</li>
+</ul>
+</li>
+</ul>
+<h2 id="5.-storage-configuration" tabindex="-1">5. Storage Configuration</h2>
+<p>8 GiB is fine for now- if you run out it's <a href="ryanjoyce.me">easy to expand</a>.</p>
+<h2 id="6.-launch-instance" tabindex="-1">6. Launch Instance</h2>
+<p>You're good to go! You now have a computer running in the cloud and are by default super sick. Best ways to access are with</p>
+<ul>
+<li>EC2 Instance Connect (browser-based in the AWS console)</li>
+<li>SSH using your .pem key (recommended)</li>
+</ul>
+<blockquote>
+<p><strong>Pro Tip</strong>: For super easy direct computer access, set up your .pem key following <a href="ryanjoyce.me">this guide</a>.</p>
+</blockquote>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
