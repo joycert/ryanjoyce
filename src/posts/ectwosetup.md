@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My EC2 Setup
-description: Run your own server if ur not a cuck bitch
+description: Run ur own server if ur cool
 image: ectwosetup.png
 date: 2025-04-23
 tags: techposts
@@ -11,9 +11,9 @@ tags: techposts
 
 This is where I deploy my website and some useful backend stuff. It is by no means optimized for security or performance, but its a great middle ground.
 
-1. Access the AWS EC2 Console
+## 1. Access the AWS EC2 Console
 
-- Navigate to: [EC2 Console](https://us-east-2.console.aws.amazon.com/ec2/home)
+Navigate to: [EC2 Console](https://us-east-2.console.aws.amazon.com/ec2/home)
 
 ## 2. Configure Instance Settings
 
@@ -57,20 +57,20 @@ The default security group only opens SSH ports. Here are some that I open becau
   - Port Range: 443
   - Source: Anywhere
 
-- **Unencrypted MQTT**
+- **MQTT (Unencrypted)**
 
   - Type: Custom TCP
   - Port Range: 1883
   - Source: Anywhere
 
-- **Encrypted MQTT**
+- **MQTT (Encrypted)**
   - Type: Custom TCP
   - Port Range: 8883
   - Source: Anywhere
 
 ## 5. Storage Configuration
 
-8 GiB is fine for now- if you run out it's [easy to expand](ryanjoyce.me).
+8 GiB is fine for now- if you run out it's [easy to expand](https://ryanjoyce.me/posts/ectwoexpandstorage/).
 
 ## 6. Launch Instance
 
@@ -79,4 +79,4 @@ You're good to go! You now have a computer running in the cloud and are by defau
 - EC2 Instance Connect (browser-based in the AWS console)
 - SSH using your .pem key (recommended)
 
-> **Pro Tip**: For super easy direct computer access, set up your .pem key following [this guide](ryanjoyce.me).
+> **Pro Tip**: For super easy direct computer access, set up your .pem key following [this guide](https://ryanjoyce.me/posts/ssh/).

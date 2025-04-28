@@ -16,26 +16,22 @@
     <main class="flex-grow">
         <div class="container mx-auto px-6 max-w-4xl">
             
-            <div class="w-full overflow-hidden rounded-lg mb-8">
-                <img src="/assets/images/ectwosetup.png" alt="My EC2 Setup" class="w-full h-auto">
+            <div class="w-full overflow-hidden rounded-lg mb-8 flex justify-center">
+                <img src="/assets/images/ectwosetup.png" alt="My EC2 Setup" class="max-w-2xl max-h-96 object-contain">
             </div>
             
             
             <h1 class="text-4xl font-bold text-gray-900 mb-4">My EC2 Setup</h1>
             
             
-            <p class="text-xl text-gray-600 mb-8">Run your own server if ur not a cuck bitch</p>
+            <p class="text-xl text-gray-600 mb-8">Run ur own server if ur cool</p>
             
             
             <div class="prose prose-lg max-w-none mb-16">
                 <h2 id="this-is-how-i-like-to-setup-my-aws-ec2-instance" tabindex="-1">This is how I like to setup my AWS EC2 instance</h2>
 <p>This is where I deploy my website and some useful backend stuff. It is by no means optimized for security or performance, but its a great middle ground.</p>
-<ol>
-<li>Access the AWS EC2 Console</li>
-</ol>
-<ul>
-<li>Navigate to: <a href="https://us-east-2.console.aws.amazon.com/ec2/home">EC2 Console</a></li>
-</ul>
+<h2 id="1.-access-the-aws-ec2-console" tabindex="-1">1. Access the AWS EC2 Console</h2>
+<p>Navigate to: <a href="https://us-east-2.console.aws.amazon.com/ec2/home">EC2 Console</a></p>
 <h2 id="2.-configure-instance-settings" tabindex="-1">2. Configure Instance Settings</h2>
 <h3 id="basic-configuration" tabindex="-1">Basic Configuration</h3>
 <p><img src="/assets/images/ectwosetup/basic_config.png" alt="Basic Configuration Settings"></p>
@@ -78,7 +74,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Unencrypted MQTT</strong></p>
+<p><strong>MQTT (Unencrypted)</strong></p>
 <ul>
 <li>Type: Custom TCP</li>
 <li>Port Range: 1883</li>
@@ -86,7 +82,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Encrypted MQTT</strong></p>
+<p><strong>MQTT (Encrypted)</strong></p>
 <ul>
 <li>Type: Custom TCP</li>
 <li>Port Range: 8883</li>

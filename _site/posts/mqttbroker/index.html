@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Setting Up a MQTT Broker on EC2</title>
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+    <header class="w-full text-center mb-8 pt-8">
+        <a href="/" class="text-4xl font-bold text-gray-800 no-underline hover:underline">
+            Ryan Joyce
+        </a>
+    </header>
+    
+    <main class="flex-grow">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <div class="w-full overflow-hidden rounded-lg mb-8 flex justify-center">
+                <img src="/assets/images/mqttbroker.webp" alt="Setting Up a MQTT Broker on EC2" class="max-w-2xl max-h-96 object-contain">
+            </div>
+            
+            
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Setting Up a MQTT Broker on EC2</h1>
+            
+            
+            <p class="text-xl text-gray-600 mb-8">Or, how to talk to your smart fridge from the cloud</p>
+            
+            
+            <div class="prose prose-lg max-w-none mb-16">
+                <h2 id="why%3F%3F%3F" tabindex="-1">Why???</h2>
+<p>I go into this problem more in the README for this Github project (<a href="https://github.com/joycert/light_listener">light_listener</a>) but the TLDR is that it's really hard to send data from the cloud to an edge device. Your wifi router does a wonderful job protecting anything in your home from outside attack, and unless you want to go into it and mess with some config stuff that means you can't just &quot;send&quot; data to anything unless it asks for it.</p>
+<p>The most reasonable solution here is to use the <a href="ryanjoyce.me">MQTT</a> protocol. This way, your device always has a lightweight connection to your &quot;broker&quot; in the cloud that will relay any information to your device you'd like it to.</p>
+<h2 id="what-you-need" tabindex="-1">What you need</h2>
+<ol>
+<li><a href="ryanjoyce.me/ectwosetup">An AWS EC2 instance</a></li>
+<li>Homebrew (on mac)</li>
+<li>Mosquitto installed locally</li>
+</ol>
+<h2 id="how-to-do-it" tabindex="-1">How to do it</h2>
+<h3 id="1.-ssh-into-your-ec2-instance" tabindex="-1">1. SSH into your EC2 instance</h3>
+<h3 id="2.-install%2C-enable%2C-and-start-mosquitto" tabindex="-1">2. Install, enable, and start Mosquitto</h3>
+<pre><code class="language-bash">sudo apt update
+sudo apt install -y mosquitto mosquitto-clients
+sudo systemctl enable mosquitto
+sudo systemctl start mosquitto
+</code></pre>
+<p>You can just copy and paste this into your terminal then hit enter.</p>
+<p><strong>Explanation of code block:</strong></p>
+<ul>
+<li>Get a list of package updates you might need</li>
+<li>Install the packages mosquitto and mosquitto-clients that let you run the broker and communicate with it (-y is a flag that automatically says yes to the &quot;do you want to install&quot; prompt)</li>
+<li>Register moquitto to automatically start when the system restarts (in case your instance ever goes down)</li>
+<li>Start the broker</li>
+</ul>
+<h3 id="3.-test-the-broker-locally" tabindex="-1">3. Test the broker locally</h3>
+<pre><code class="language-bash">mosquitto_sub -t test &amp;
+mosquitto_pub -t test -m &quot;Hello friend&quot;
+</code></pre>
+<p><strong>Explanation of code block:</strong></p>
+<ul>
+<li>Subscribe to the (-t) topic &quot;test&quot; (&amp; runs this command in the background so you can keep running other commands while this one listens)</li>
+<li>Publish to the topic &quot;test&quot; the (-m) message &quot;Hello friend&quot;</li>
+</ul>
+<p>You should see the string &quot;Hello Friend&quot; appear in your EC2 terminal.</p>
+<h3 id="4.-test-the-broker-remotely" tabindex="-1">4. Test the broker remotely</h3>
+<p>Open a terminal window on your computer and run the following:</p>
+<pre><code class="language-bash">mosquitto_pub -h your-ec2-ip -t test -m &quot;Hello from my computer&quot;
+</code></pre>
+<p>You should see the string &quot;Hello from my computer&quot; in your EC2 terminal.</p>
+<h2 id="congrats!" tabindex="-1">Congrats!</h2>
+<p>Now you have a remote MQTT broker that you can publish/subscribe to with just an internet connection!</p>
+<p>I'd highly recommend <a href="ryanjoyce.me">adding a username and password to your broker</a> so that the bad people don't find and spam it. But take a moment and send a few messages, this is really sick.</p>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
